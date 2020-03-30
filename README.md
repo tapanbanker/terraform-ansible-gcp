@@ -38,6 +38,8 @@
  - Wait for 3-4 minutes for the terraform and ansible to execute.
  - Check the Google Cloud Platform console.
  
+ ![Google Cloud Platform](docs/2-gcp-instance.png)
+ 
 # Technical Description
 
 - The template is using Terraform with Ansible
