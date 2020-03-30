@@ -1,0 +1,36 @@
+# playbook.yml:
+---
+- name: "Configure host"
+  hosts: 127.0.0.1
+  connection: local
+  become: yes
+  tasks:
+
+    - name: "Install php"
+      apt:
+        name: php7.2
+        state: latest
+      tags: ["web"]
+    - name: "Install nginx"
+      apt:
+        name: nginx
+        state: latest
+      tags: ["web"]
+    - name: "Stop apache"
+      systemd:
+        name: apache2
+        state: stopped
+        enabled: no
+      tags: ["web"]
+    - name: "Start nginx"
+      systemd:
+        name: nginx
+        state: started
+        enabled: yes
+      tags: ["web"]
+    - name: "Install redis"
+      apt:
+        name: redis
+        state: latest
+      tags: ["redis"]
+
