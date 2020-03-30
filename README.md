@@ -50,9 +50,10 @@
 - The Ansible Playbook will install the PHP and NGNIX in one GCP Compute Engine
 - The Anisble Playbook will install Redis on another GCP Compute Engine.
 - Nginx is exposed to Internet via google load balancer.
-
+- The Ansible Playbook is triggered by Terraform using cloud-config
+- The Anisble Playbook utilize Google Cloud Storage
+- There are task in the Ansible playbook and marked with tags (Intall PHP, Install Apache, Start NGNIX, REDIS)
  - After login into the GCP Compute by SSH  execute following commands to verify the PHP, NGNIX and redis installation by Ansible
-
 - On the PHP GCP Compute Engine
 
 ```
