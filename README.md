@@ -19,11 +19,15 @@
 - Use the following link - https://cloud.google.com/docs/authentication/production
 
 # How to Execute
-- Perform the Git clone
-- cd <<project-directory>>
+- Perform the Git clone 
+ ```
+cd terraform-ansible-gcp
+ ```
 - Update the terraform.tfvars file. Update the 'project_id' with the GCP Project ID
  ![Project ID](docs/project-id-gcp.png)
-- Perform following commands to authenticate GCP
+- Perform following commands to authenticate GCP. 
+- Recommend to use us-east-1 region and us-east-1b as zone.
+- Select the project and the email address.
  ```
  glcoud init 
  ```
